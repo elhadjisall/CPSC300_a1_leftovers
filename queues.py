@@ -222,6 +222,7 @@ class HospitalQueues:
         self.assessment_queue = FIFOQueue()
         self.waiting_room_queue = PriorityQueue()
         self.admission_queue = FIFOQueue()
+        self.assessment_in_progress = False  # Track if assessment is currently happening
     
     def get_queue(self, queue_type: str) -> Queue:
         """
